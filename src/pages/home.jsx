@@ -1,7 +1,7 @@
 import React from "react";
 // import Navbar from "./components/navbar";
 // import bgimage from "./components/backgroundwall/bgimage";
-import './components/backgroundwall/bgimage.css'
+import '../components/backgroundwall/bgimage.css'
 
 
 const Home = () => {
