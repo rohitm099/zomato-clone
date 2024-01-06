@@ -73,6 +73,7 @@ const main = async () => {
 
                 if (feedback !== null) {
                     res.json({ "message": "email is already registered" })
+                    return
                 }
 
                 //insert the data in the database
@@ -83,6 +84,12 @@ const main = async () => {
                 })
 
                 console.log(result)
+
+                console.log("The feedback i get from database: ", result);
+                // if the data is inserted we will send a response
+                // data add successfully otherwise
+                // something went wrong
+                res.json({ message: "User Created Successfully!" });
 
             } catch (e) {
                 console.log("Error in the register route:", e)
