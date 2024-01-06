@@ -2,6 +2,7 @@
 const express = require('express')
 const bodyparser = require('body-parser')
 const mongodb = require('mongodb')
+const cors = require("cors")
 
 //declaring the express app
 const app = express()
@@ -12,6 +13,7 @@ const uri = "mongodb://127.0.0.1:27017"
 const client = new MongoClient(uri)
 
 //Middlewares
+app.use(cors())
 app.use(bodyparser.urlencoded({ extended: false }))
 app.use(bodyparser.json())
 
