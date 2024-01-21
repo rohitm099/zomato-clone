@@ -41,12 +41,13 @@ const Register = () => {
     }
 
     return (
-        <div className="flex justify-center p-3 h-screen items-center">
-            <form onSubmit={handleSubmit} className="p-3 shadow-lg">
+        <div className=" flex justify-center p-3 h-screen items-center">
+            <form onSubmit={handleSubmit} className=" p-3 shadow-lg">
+                <h1>Sign Up</h1>
                 <legend>{message}</legend>
                 <div className="p-2">
                     <input
-                        className="p-2 border border-solid border-slate-300 rounded-lg focus:outline-2 focus:outline focus:outline-green-100"
+                        className="w-64 p-2 border border-solid border-slate-300 rounded-lg focus:outline-2 focus:outline focus:outline-green-100"
                         type="emtextail"
                         value={username}
                         placeholder="username"
@@ -55,7 +56,7 @@ const Register = () => {
                 </div>
                 <div className="p-2">
                     <input
-                        className="p-2 border border-solid border-slate-300 rounded-lg"
+                        className="w-64 p-2 border border-solid border-slate-300 rounded-lg focus:outline-2 focus:outline focus:outline-green-100"
                         type="email"
                         value={email}
                         placeholder="email"
@@ -64,7 +65,7 @@ const Register = () => {
                 </div>
                 <div className="p-2">
                     <input
-                        className="p-2 border border-solid border-slate-300 rounded-lg"
+                        className="w-64 p-2 border border-solid border-slate-300 rounded-lg focus:outline-2 focus:outline focus:outline-green-100"
                         type="password"
                         value={password}
                         placeholder="password"
@@ -72,7 +73,10 @@ const Register = () => {
                         onChange={e => setPassword(e.target.value)} />
                 </div>
                 <div className="p-2">
-                    <button className="brand p-2 text-white" type="submit">Register</button>
+                    <button className="brand w-64 p-2 text-white" type="submit">Register</button>
+                </div>
+                <div className="p-2">
+                    <button className="w-64 p-2 text-black" type="submit">Continue With Google</button>
                 </div>
             </form>
         </div>

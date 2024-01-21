@@ -10,12 +10,53 @@
     .brand {
         background: #ef4f5f;
     }
-}
 
-.top {
-    position: relative;
-}
+    .top {
+        position: relative;
+    }
 
-.navcolor {
-    color: white;
+    .navcolor {
+        color: white;
+    }
+
+    .container {
+        padding: 1rem 5rem;
+    }
+
+    .brandBanner {
+        background-color: rgb(197, 197, 197);
+        background-image: url(https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png);
+        width: 100%;
+        background-blend-mode: multiply;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 1.5rem 0rem;
+        background-position: center;
+        top: 0;
+        color: white;
+    }
+
+    .gallerycontainer {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(200px, 1fr));
+        grid-template-rows: repeat(2, 200px);
+    }
+
+    .gallerycontainer>* {
+        width: 100%;
+        height: 100%;
+    }
+
+    .gallerycontainer>*:nth-of-type(1) {
+        grid-column: 1/4;
+        grid-row: 1/3;
+    }
+
+    .gallerycontainer>*:nth-of-type(3) {
+        grid-row-start: 2;
+    }
+
+    .gallerycontainer>*:nth-of-type(4) {
+        grid-row: 1/3;
+    }
 }

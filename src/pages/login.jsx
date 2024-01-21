@@ -35,30 +35,33 @@ const Login = () => {
     }
 
     return (
-        <>
-            <form onSubmit={handleSubmit}>
+        <div className=" flex justify-center p-3 h-screen items-center">
+            <form onSubmit={handleSubmit} className="bg-white p-3 shadow-lg">
+                <h1>Login</h1>
                 <legend>{message}</legend>
-                <div>
+                <div className="p-2">
                     <input
+                        className="w-64 p-2 border border-solid border-slate-300 rounded-lg focus:outline-2 focus:outline focus:outline-green-100"
                         type="email"
                         value={email}
                         placeholder="email"
                         required name="email"
                         onChange={e => setEmail(e.target.value)} />
                 </div>
-                <div>
+                <div className="p-2">
                     <input
+                        className="w-64 p-2 border border-solid border-slate-300 rounded-lg focus:outline-2 focus:outline focus:outline-green-100"
                         type="password"
                         value={password}
                         placeholder="password"
                         required name="password"
                         onChange={e => setPassword(e.target.value)} />
                 </div>
-                <div>
-                    <button type="submit">Login</button>
+                <div className="p-2">
+                    <button className="brand w-64 p-2 text-white" type="submit">Login</button>
                 </div>
             </form>
-        </>
+        </div>
     )
 }
 
