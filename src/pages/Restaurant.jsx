@@ -4,7 +4,7 @@ import axios from "axios";
 import RNavbar from "../components/RNavbar";
 
 
-const URI = "http://localhost:5000"
+const URI = "https://zomato-clone-three-blush.vercel.app"
 
 const Restaurant = () => {
     const params = useParams()
@@ -15,7 +15,7 @@ const Restaurant = () => {
 
     const searchRestaurant = async (data) => {
         try {
-            const res = await axios(`http://localhost:5000/restaurants/${data}`)
+            const res = await axios(`https://zomato-clone-three-blush.vercel.app/restaurants/${data}`)
 
             console.log("The Response:", res)
 

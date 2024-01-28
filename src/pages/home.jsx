@@ -28,7 +28,7 @@ const Home = () => {
         try {
             if (data === "") {
                 //show all data
-                const res = await axios(`http://localhost:5000/restaurants`)
+                const res = await axios(`https://zomato-clone-three-blush.vercel.app/restaurants`)
 
                 console.log("The Response:", res)
 
@@ -36,7 +36,7 @@ const Home = () => {
                 return
             }
 
-            const res = await axios(`http://localhost:5000/restaurants/${data}`)
+            const res = await axios(`https://zomato-clone-three-blush.vercel.app/restaurants/${data}`)
 
             console.log("The Response:", res)
 

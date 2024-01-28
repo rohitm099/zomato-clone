@@ -14,7 +14,7 @@ const Register = () => {
 
             console.log(email, password)
 
-            const response = await axios("http://localhost:5000/register", {
+            const response = await axios("https://zomato-clone-three-blush.vercel.app/register", {
                 method: "POST",
                 header: {
                     'Content-Type': 'application/json'
