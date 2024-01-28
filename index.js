@@ -9,7 +9,7 @@ const app = express()
 
 //Mongodb Confriguration
 const { MongoClient } = mongodb
-const uri = "mongodb://127.0.0.1:27017"
+const uri = "mongodb+srv://m001-student:m001-password@server967.eltku.mongodb.net/?retryWrites=true&w=majority"
 const client = new MongoClient(uri)
 
 //Middlewares
