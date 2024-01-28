@@ -29,10 +29,44 @@ const main = async () => {
 
         const db = client.db(dbName)
         const collection = db.collection(collectionName)
+        const foodCollection = db.collection("food_items")
+
+
         app.get("/", (req, res) => {
             res.send("server is live!")
+        });
+
+        //for finding the product data
+        app.get("/restaurants", async (req, res) => {
+            try {
+                //fetch all the document from the coleection
+                const result = await foodCollection.find().toArray()
+
+                console.log(result)
+                res.json(result)
+            } catch (e) {
+                console.log("Error occured in /product route:", e)
+            }
         })
 
+
+        app.get("/restaurants/:restaurantName", async (req, res) => {
+            try {
+                console.log(req.params)
+
+                const regx = new RegExp(`^${req.params.restaurantName}`, "i")
+
+                // find the doc in DB
+                const result = await foodCollection.find({ "rname": { $regex: regx } }).toArray()
+
+                console.log(result)
+
+                //send json res
+                res.json(result)
+            } catch (e) {
+                console.log("Error Occured:", e)
+            }
+        })
 
         //Post
         //Login
@@ -95,6 +129,7 @@ const main = async () => {
                 console.log("Error in the register route:", e)
             }
         })
+
 
         app.listen(port, () => {
             console.log("Server running on http://localhost:${port}")
